@@ -1,0 +1,4 @@
+movies = {
+    "The Power of the Pup": ["6th December 2021", "Ceciline Bumberbach, Antonie Marie", "In the remote homestead in the Australian Outback, a newborn pup brings together a fractured family and touches everyone's hearts. Based on the original novel.", "https://www.rd.com/wp-content/uploads/2018/02/30_Adorable-Puppy-Pictures-that-Will-Make-You-Melt_124167640_YamabikaY.jpg", 4],
+    "The Blobby": ["29th September 1956", "Jackie Newman, Geoffrey Rains", "A socially awkward blob person terrorises the people of a small american town in the 1960s, with hilarious results. A comedy remake of the Science-Terror film 'The Blob' from the 1930s.", "https://pbs.twimg.com/media/DM6SGToU8AAM5Bb?format=jpg&name=4096x4096", 3],
+}

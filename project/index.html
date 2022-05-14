@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Grid and Flexbox - main page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A student project using CSS Grid and Flexbox.">
+        <meta name="author" content="Roland Askew">
+        <link rel="stylesheet" href="index.css">
+        <script src="data.js"></script>
+        <script defer src="index.js"></script>
+    </head>
+    <template id="template-master-item">
+        <form class="movie-master-item" action="moviepage.html">
+            <section class="movie-master-item-img">
+                <button type="submit">
+                    <img src="" alt="title"/>
+                </button>
+            </section>
+            <section class="movie-master-item-title">
+                <h1>title</h1>
+            </section>
+            <section class="movie-master-item-short-desc">
+                description
+            </section>
+            <input hidden type="text" name="title" value="" />
+        </form>
+    </template>
+    <body>
+        <section class="movie-master">
+
+        </section>
+    </body>
+</html>

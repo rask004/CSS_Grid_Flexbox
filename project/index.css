@@ -1,0 +1,146 @@
+html{font-size:16px;font-family:"Arial","Veranda",sans-serif,monospace;}
+
+body {
+    margin:1em;
+    background-color: black;
+    color: white;
+}
+
+.movie-master {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, min-content);
+    column-gap: 16px;
+    row-gap: 16px;
+    justify-content: center;
+}
+
+.movie-master-item {
+    justify-self: stretch;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25em;
+    padding: 0.25em;
+}
+
+.movie-master-item:hover {
+    background-color: #111111;
+}
+
+.movie-master-item-img {
+    flex-grow: 4;
+}
+
+.movie-master-item-img button[type=submit] {
+    padding: 0;
+    border: 0;
+    background-color: black;
+}
+
+.movie-master-item-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.movie-master-item-title {
+    align-self: center;
+    flex-shrink: 1;
+}
+
+.movie-master-item-short-desc {
+    flex-shrink: 1;
+}
+
+
+.movie-master-item-img button:hover, .movie-master-item-img img:hover {
+    background-color: #111111;
+    cursor: pointer;
+}
+
+.movie-detail {
+    font-size: 1.5em;
+}
+
+.movie-detail-header {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.movie-detail-title-img {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-detail-img {
+    align-self: center;
+    flex-grow: 4;
+}
+
+.movie-detail-img img {
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+}
+
+.movie-detail-title {
+    align-self: center;
+    flex-shrink: 1;
+    margin-bottom: 0.5em;
+}
+
+.movie-detail-title h2 {
+    font-size: 4em;
+}
+
+.movie-detail-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-detail-date {
+    align-self: center;
+    flex-shrink: 1;
+    padding-top: 1em;
+}
+
+.movie-detail-rating {
+    align-self: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+}
+
+.movie-detail-rating > section {
+    padding-left: 0.25em;
+}
+
+.movie-detail-rating:first-child {
+    padding-left: 0;
+}
+
+.movie-detail-actors {
+    align-self: center;
+    flex-grow: 5;
+    padding-top: 1em;
+}
+
+.movie-detail-description {
+    padding: 1em;
+}
+
+.movie-master-return {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.movie-master-return > a {
+    margin-right: 1em;
+}
