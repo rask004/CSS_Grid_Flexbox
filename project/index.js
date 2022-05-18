@@ -1,5 +1,7 @@
-const changeActiveMovieDetail = function(movieTitle) {
-    activeMovieDetail = movieTitle
+const shortenSentence = function(sentence, charCount) {
+    const s = sentence.substr(0, charCount)
+    const shortDesc = s.slice(0, s.lastIndexOf(" ")).concat("...")
+    return shortDesc
 }
 
 const renderMovieList = function() {
@@ -7,16 +9,16 @@ const renderMovieList = function() {
     if (container != null) {
         const template = document.querySelector('#template-master-item')
         for (const title in movies) {
-            const description = movies[title][2].substr(0, 90)
+            const description = movies[title][2]
             const urlImg = movies[title][3]
-            const shortDesc = description.slice(0, description.lastIndexOf(" ")).concat("...")
+            const shortDesc = shortenSentence(description, 90)
 
             const masterItemElement = template.content.cloneNode(true).children[0]
 
-            const itemTitleElement = masterItemElement.querySelector(".movie-master-item-title")
-            itemTitleElement.querySelector("h1").innerHTML = title
+            const itemTitleElement = masterItemElement.querySelector("h1")
+            itemTitleElement.innerHTML = title
 
-            const itemShortDescElement = masterItemElement.querySelector(".movie-master-item-short-desc")
+            const itemShortDescElement = masterItemElement.querySelector("p")
             itemShortDescElement.innerHTML = shortDesc
 
             const img = masterItemElement.querySelector("img")
@@ -41,7 +43,7 @@ const renderMovieDetails = function() {
     const rating = movies[title][4]
     const detailElement = document.querySelector(".movie-detail")
 
-    const titleElement = detailElement.querySelector("h2")
+    const titleElement = detailElement.querySelector(".movie-detail-title")
     titleElement.innerHTML = title
 
     const img = detailElement.querySelector("img")
@@ -63,7 +65,6 @@ const renderMovieDetails = function() {
         ratingContainerElement.appendChild(starContainer)
 
     }
-
 
     const actorsContainerElement = document.querySelector(".movie-detail-actors")
     actorsContainerElement.innerHTML = actors
